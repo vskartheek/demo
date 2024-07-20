@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Fetch code') {
             steps {
-                echo 'Fetching code'
+               git branch: 'main', url: 'https://github.com/vskartheek/demo.git'
             }
         }
 	 stage('Install webserver') {
