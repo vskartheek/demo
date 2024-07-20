@@ -9,8 +9,7 @@ pipeline {
         }
 	 stage('Install webserver') {
             steps {
-               ansiblePlaybook inventory: '/var/lib/jenkins/workspace/test/dev', playbook: '/var/lib/jenkins/workspace/test/playbook1.yml', vaultTmpPath: ''
-            }
+		ansiblePlaybook inventory: '/var/lib/jenkins/workspace/test/dev', playbook: '/var/lib/jenkins/workspace/test/playbook1.yml', vaultTmpPath: ''            }
         }
 	 stage('deploy app') {
             steps {
