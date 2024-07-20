@@ -9,7 +9,7 @@ pipeline {
         }
 	 stage('Install webserver') {
             steps {
-                echo 'Install webserver'
+               ansiblePlaybook inventory: '/var/lib/jenkins/workspace/test/dev', playbook: '/var/lib/jenkins/workspace/test/playbook1.yml', vaultTmpPath: ''
             }
         }
 	 stage('deploy app') {
